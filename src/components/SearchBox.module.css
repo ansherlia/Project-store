@@ -1,0 +1,30 @@
+/** @format */
+.container {
+	display: flex;
+	align-items: center;
+}
+.container input {
+	width: 350px;
+	border: 2px ridge rgb(119, 194, 109);
+	padding: 8px 14px;
+	font-size: 1.3rem;
+	margin-bottom: 60px;
+}
+input:focus {
+	outline: none;
+}
+.container button {
+	padding: 9px 14px;
+	font-size: 1.3rem;
+	margin-bottom: 60px;
+	cursor: pointer;
+	margin-left: 4px;
+	background-color: rgb(1, 1, 8);
+	border: none;
+    color: rgb(255, 254, 255);
+    transition: all .4s ease;
+}
+.container button:hover {
+    color: #000;
+    background-color: #d5dce0;
+}

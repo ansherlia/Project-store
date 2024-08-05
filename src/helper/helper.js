@@ -1,5 +1,5 @@
 const shortenText = (text) => {
-    return text.split(" ").slice(0,3).join("")
+    return text.split(" ").slice(0,3).join(" ")
 }
 
 const searchProducts = (products, search) => {
