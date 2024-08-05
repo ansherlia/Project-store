@@ -5,6 +5,10 @@
 }
 body {
 	background-color: rgb(240, 239, 237);
-	max-width: 1400px;
+	max-width: 1700px;
 	margin: auto;
+	display: flex;
+	justify-content: center;
+
+	margin-top: 100px;
 }

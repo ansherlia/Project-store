@@ -1,0 +1,36 @@
+/** @format */
+
+.category {
+	width: 220px;
+	margin-top: 20px;
+	border: 1px ridge saddlebrown;
+	height: fit-content;
+	margin-left: 20px;
+}
+.category div {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	color: blueviolet;
+}
+.category ul {
+	list-style: none;
+	padding: 10px;
+}
+.category li {
+	margin: 7px 0;
+	color: rgb(56, 155, 10);
+	font-size: 1.1rem;
+	font-weight: 700;
+	cursor: pointer;
+}
+.category h3 {
+	color: blueviolet;
+	margin-left: 3px;
+	font-size: 1.5rem;
+}
+.selected {
+	background-color: rgb(229, 238, 179);
+	padding: 3px 7px;
+	border-radius: 5px;
+}

@@ -1,10 +1,16 @@
 .container {
 	display: flex;
 	justify-content: space-between;
+    width: 1400px;
+    /* margin: auto; */
 }
 .cards {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
     flex-wrap: wrap;
+    width: 1200px;
+}
+.category {
+    width: 220px;
 }

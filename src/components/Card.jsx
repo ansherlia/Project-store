@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import styles from "./Card.module.css";
 function Card({ data }) {
 	const { image, title, category, price, id } = data;
-	return (
+	return (    
 		<div className={styles.card}>
 			<img src={image} alt={title} />
 			<h3>{shortenText(title)}</h3>
