@@ -2,7 +2,7 @@ import { FaList } from "react-icons/fa6";
 import { useProducts } from "../contexts/ProductProvider";
 import Card from "../components/Card";
 import { useEffect, useState } from "react";
-
+import styles from "./ProductsPage.module.css";
 function ProductsPage() {
 	const products = useProducts();
 	const [displayed, setDisplayed] = useState([]);
@@ -10,8 +10,8 @@ function ProductsPage() {
 		setDisplayed(products);
 	}, [products]);
 	return (
-		<div>
-			<div>
+		<div className={styles.container}>
+			<div className={styles.card}>
 				{displayed.map((pr) => (
 					<Card data={pr} key={pr.id} />
 				))}
