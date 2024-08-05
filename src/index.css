@@ -1,0 +1,10 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: rgb(240, 239, 237);
+	max-width: 1400px;
+	margin: auto;
+}
