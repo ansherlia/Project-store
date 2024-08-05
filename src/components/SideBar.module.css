@@ -6,6 +6,8 @@
 	border: 1px ridge saddlebrown;
 	height: fit-content;
 	margin-left: 20px;
+	border: dashed 1px seagreen;
+	border-radius: 10px;
 }
 .category div {
 	display: flex;

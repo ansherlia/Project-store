@@ -1,3 +1,5 @@
+/** @format */
+
 function PageNotFound() {
 	return <div>PageNotFound</div>;
 }

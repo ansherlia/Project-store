@@ -4,13 +4,15 @@ import React from "react";
 import { FaList } from "react-icons/fa6";
 import styles from "./SideBar.module.css";
 import { list } from "../constants/list";
+import { creatObjectQuery } from "../helper/helper";
+// import { createObjectQuery } from "../helper/helper";
 function SideBar({ setQuery, query }) {
 	console.log(query);
 	const categoryHandler = (event) => {
 		const category = event.target.innerText.toLowerCase();
 		const tagName = event.target.tagName;
 		if (tagName === "LI") {
-			setQuery((query) => ({ ...query, category: category }));
+			setQuery((query) => creatObjectQuery(query, { category }));
 		}
 	};
 	return (
@@ -22,6 +24,7 @@ function SideBar({ setQuery, query }) {
 			<ul>
 				{list.map((li) => (
 					<li
+						key={li.id}
 						className={
 							query.category === li.type.toLowerCase() ? styles.selected : null
 						}>

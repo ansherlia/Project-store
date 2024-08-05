@@ -1,3 +1,5 @@
+/** @format */
+
 import { useProducts } from "../contexts/ProductProvider";
 import Card from "../components/Card";
 import { useEffect, useState } from "react";
@@ -5,22 +7,24 @@ import styles from "./ProductsPage.module.css";
 import SearchBox from "../components/SearchBox";
 import { filterProducts, searchProducts } from "../helper/helper";
 import SideBar from "../components/SideBar";
+import { useSearchParams } from "react-router-dom";
 function ProductsPage() {
 	const products = useProducts();
 	const [displayed, setDisplayed] = useState([]);
 	const [search, setSearch] = useState("");
 	const [query, setQuery] = useState({});
-
-	console.log(query);
+	const [searchParams, setSearchParams] = useSearchParams();
+	
 	useEffect(() => {
 		setDisplayed(products);
 	}, [products]);
 	useEffect(() => {
+		setSearchParams(query);
 		let finalProducts = searchProducts(products, query.search);
 		finalProducts = filterProducts(finalProducts, query.category);
 		setDisplayed(finalProducts);
 	}, [query]);
-	console.log(query)
+	console.log(query);
 	return (
 		<>
 			<SearchBox search={search} setSearch={setSearch} setQuery={setQuery} />

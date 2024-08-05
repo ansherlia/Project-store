@@ -1,10 +1,10 @@
 /** @format */
-
 import { FaSearch } from "react-icons/fa";
 import styles from "./SearchBox.module.css";
+import { creatObjectQuery } from "../helper/helper";
 function SearchBox({ search, setSearch, setQuery }) {
 	const searchHandler = () => {
-		setQuery((query) => ({ ...query, search: search }));
+		setQuery((query) => creatObjectQuery(query, { search: search }));
 	};
 	return (
 		<div className={styles.container}>

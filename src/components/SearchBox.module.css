@@ -9,6 +9,8 @@
 	padding: 8px 14px;
 	font-size: 1.3rem;
 	margin-bottom: 60px;
+	border: dashed 1px seagreen;
+	border-radius: 10px;
 }
 input:focus {
 	outline: none;
@@ -19,12 +21,13 @@ input:focus {
 	margin-bottom: 60px;
 	cursor: pointer;
 	margin-left: 4px;
+	border: dashed 1px seagreen;
+	border-radius: 10px;
 	background-color: rgb(1, 1, 8);
-	border: none;
-    color: rgb(255, 254, 255);
-    transition: all .4s ease;
+	color: rgb(255, 254, 255);
+	transition: all 0.4s ease;
 }
 .container button:hover {
-    color: #000;
-    background-color: #d5dce0;
+	color: #000;
+	background-color: #d5dce0;
 }

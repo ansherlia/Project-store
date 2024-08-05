@@ -14,4 +14,22 @@ const filterProducts = (products, category) => {
     return filteredCategory
 }
 
-export {shortenText, searchProducts , filterProducts}
+const sumProducts = (products) => {
+    const itemCounter = products.reduce((acc, cur) => acc + cur.quantity ,0)
+    const totalPrice = products.reduce((acc , cur) => acc + cur.price * cur.quantity,0)
+    return { itemCounter , totalPrice }
+}
+
+const creatObjectQuery = (preQuery, newQuery) => {
+    if (newQuery.category === "all") {
+        const {category , ...rest} = preQuery
+        return rest
+    }
+    if (newQuery.search === "") {
+        const {search , ...rest} = preQuery
+        return rest
+    }
+    return {...preQuery , ...newQuery}
+}
+
+export {shortenText, searchProducts , filterProducts, sumProducts, creatObjectQuery}
