@@ -6,30 +6,33 @@ import styles from "./ProductsPage.module.css";
 function ProductsPage() {
 	const products = useProducts();
 	const [displayed, setDisplayed] = useState([]);
+	const [search, setSearch] = useState("");
 	useEffect(() => {
 		setDisplayed(products);
 	}, [products]);
 	return (
-		<div className={styles.container}>
-			<div className={styles.card}>
-				{displayed.map((pr) => (
-					<Card data={pr} key={pr.id} />
-				))}
-			</div>
-			<div>
+		<>
+			<div className={styles.container}>
+				<div className={styles.cards}>
+					{displayed.map((pr) => (
+						<Card data={pr} key={pr.id} />
+					))}
+				</div>
 				<div>
-					<h3>Categories</h3>
-					<FaList />
-					<ul>
-						<li>All</li>
-						<li>Electronics</li>
-						<li>Jewelery</li>
-						<li>Men's clothing</li>
-						<li>Women's clothing</li>
-					</ul>
+					<div>
+						<h3>Categories</h3>
+						<FaList />
+						<ul>
+							<li>All</li>
+							<li>Electronics</li>
+							<li>Jewelery</li>
+							<li>Men's clothing</li>
+							<li>Women's clothing</li>
+						</ul>
+					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 }
 
