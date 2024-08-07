@@ -7,7 +7,6 @@ import { list } from "../constants/list";
 import { creatObjectQuery } from "../helper/helper";
 // import { createObjectQuery } from "../helper/helper";
 function SideBar({ setQuery, query }) {
-	console.log(query);
 	const categoryHandler = (event) => {
 		const category = event.target.innerText.toLowerCase();
 		const tagName = event.target.tagName;
