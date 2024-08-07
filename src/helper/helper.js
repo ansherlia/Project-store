@@ -50,4 +50,8 @@ const getInitialQuery = (searchParams) => {
     return query
 }
 
-export {shortenText,getInitialQuery, searchProducts , filterProducts, productQuantity, sumProducts, creatObjectQuery}
+const toFix = (num) => {
+    return num.toFixed(2)
+}
+
+export {shortenText,getInitialQuery, searchProducts ,toFix, filterProducts, productQuantity, sumProducts, creatObjectQuery}
