@@ -5,17 +5,23 @@ import Card from "../components/Card";
 import { useEffect, useState } from "react";
 import styles from "./ProductsPage.module.css";
 import SearchBox from "../components/SearchBox";
-import { filterProducts, searchProducts } from "../helper/helper";
+import {
+	filterProducts,
+	getInitialQuery,
+	searchProducts,
+} from "../helper/helper";
 import SideBar from "../components/SideBar";
 import { useSearchParams } from "react-router-dom";
+import Loader from "../components/Loader";
 function ProductsPage() {
 	const products = useProducts();
 	const [displayed, setDisplayed] = useState([]);
 	const [search, setSearch] = useState("");
 	const [query, setQuery] = useState({});
 	const [searchParams, setSearchParams] = useSearchParams();
-	
+
 	useEffect(() => {
+		setQuery(getInitialQuery(searchParams));
 		setDisplayed(products);
 	}, [products]);
 	useEffect(() => {
@@ -24,10 +30,10 @@ function ProductsPage() {
 		finalProducts = filterProducts(finalProducts, query.category);
 		setDisplayed(finalProducts);
 	}, [query]);
-	console.log(query);
 	return (
 		<>
 			<SearchBox search={search} setSearch={setSearch} setQuery={setQuery} />
+			{!displayed.length && <Loader />}
 			<div className={styles.container}>
 				<div className={styles.cards}>
 					{displayed.map((pr) => (
