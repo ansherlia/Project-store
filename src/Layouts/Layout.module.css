@@ -27,7 +27,7 @@ header a:last-child {
 	padding: 10px 17px;
 	font-size: 1.5rem;
 	width: 65px;
-    position: relative;
+	position: relative;
 	border-radius: 5px;
 	color: #fff;
 	height: 50px;
@@ -36,11 +36,13 @@ header a:last-child {
 .header a span {
 	color: rgb(244, 244, 248);
 	font-weight: 800;
-    position: absolute;
-    bottom: 555px;
-    font-size: 10px;
+	position: absolute;
+	bottom: 555px;
+	font-size: 10px;
 }
-
+header button {
+	border: none;
+}
 footer {
 	display: flex;
 	justify-content: center;

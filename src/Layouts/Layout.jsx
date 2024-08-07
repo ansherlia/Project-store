@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 function Layout({ children }) {
 	const [state] = useCart();
 	const { itemCounter } = state;
-	console.log(itemCounter);
 	return (
 		<div className={styles.container}>
 			<header>
@@ -22,7 +21,7 @@ function Layout({ children }) {
 			</header>
 			{children}
 			<footer>
-				Developed By Reza with{" "}
+				Developed By Reza with
 				<span>
 					<FaGrinHearts />
 				</span>
