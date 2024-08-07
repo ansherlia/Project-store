@@ -29,7 +29,7 @@ const reducer = (state, action) => {
 			);
 			return {
 				selectedItems: [...newSelectedItem],
-				...sumProducts(state.selectedItems),
+				...sumProducts(newSelectedItem),
 				checkout: false,
 			};
 		case "INCREASE":
