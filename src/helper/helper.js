@@ -32,4 +32,22 @@ const creatObjectQuery = (preQuery, newQuery) => {
     return {...preQuery , ...newQuery}
 }
 
-export {shortenText, searchProducts , filterProducts, sumProducts, creatObjectQuery}
+const productQuantity = (state, id) => {
+    const index = state.selectedItems.findIndex(item => item.id === id);
+    if (index === -1) {
+        return 0;
+    }else {
+        return state.selectedItems[index].quantity;
+    }
+}
+
+const getInitialQuery = (searchParams) => {
+    const query = {}
+    const category = searchParams.get("category")
+    const search = searchParams.get("search")
+    if (category) query.category = category
+    if (search) query.search = search
+    return query
+}
+
+export {shortenText,getInitialQuery, searchProducts , filterProducts, productQuantity, sumProducts, creatObjectQuery}

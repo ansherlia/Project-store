@@ -10,7 +10,6 @@ function ProductProvider({ children }) {
 		api.get("/products").then((res) => setProducts(res));
 	}, []);
 
-	console.log(products);
 
 	return (
 		<ContextProducts.Provider value={products}>
