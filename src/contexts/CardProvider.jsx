@@ -13,7 +13,6 @@ const initialState = {
 };
 
 const reducer = (state, action) => {
-	console.log(state);
 	switch (action.type) {
 		case "ADD_ITEM":
 			if (!state.selectedItems.find((p) => p.id === action.payload.id)) {

@@ -1,0 +1,40 @@
+/** @format */
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 100px 0;
+	background-color: rgb(187, 186, 184);
+	padding: 10px 15px;
+}
+.container img {
+	width: 60px;
+	height: 60px;
+	background-color: none;
+}
+.container h2 {
+	color: blueviolet;
+}
+.container div {
+	display: flex;
+	justify-content: space-between;
+	width: 100px;
+	align-items: center;
+}
+.container button {
+	width: 30px;
+	height: 35px;
+	border: none;
+	background-color: blueviolet;
+	color: #fff;
+	font-size: 1.3rem;
+	padding: 1px -15px;
+	border-radius: 10px;
+    cursor: pointer;
+}
+.container div p{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #66a1e4;
+}
