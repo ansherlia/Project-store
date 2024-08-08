@@ -1,3 +1,5 @@
+/** @format */
+
 import { createContext, useContext, useEffect, useState } from "react";
 import { api } from "../services/config";
 
@@ -9,7 +11,6 @@ function ProductProvider({ children }) {
 	useEffect(() => {
 		api.get("/products").then((res) => setProducts(res));
 	}, []);
-
 
 	return (
 		<ContextProducts.Provider value={products}>
@@ -23,5 +24,11 @@ const useProducts = () => {
 	return product;
 };
 
+const productDetails = (id) => {
+	const products = useContext(ContextProducts);
+	const result = products.find((item) => item.id === id);
+	return result;
+};
+
 export default ProductProvider;
-export { useProducts };
+export { useProducts, productDetails };

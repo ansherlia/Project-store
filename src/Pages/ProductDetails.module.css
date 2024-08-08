@@ -1,0 +1,60 @@
+/** @format */
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	/* align-items: center; */
+	margin: 200px 0;
+	width: 1430px;
+}
+.container img {
+	width: 400px;
+	height: 400px;
+	padding: 25px;
+	border: 2px dashed red;
+	border-radius: 10px;
+}
+.container > div {
+	padding: 24px;
+	border: 2px dashed #aaa;
+	border-radius: 10px;
+	margin: 0 40px;
+	width: 900px;
+}
+.container h1 {
+	color: blueviolet;
+}
+.container p {
+	margin: 40px 0;
+	color: blueviolet;
+	font-size: 1.2rem;
+	width: 700px;
+	text-align: justify;
+}
+.container h2 {
+	font-size: 2.5rem;
+	color: chocolate;
+}
+.price {
+	display: flex;
+	color: blueviolet;
+	justify-content: space-between;
+	margin: 100px 20px 20px 0;
+}
+.price a {
+	text-decoration: none;
+	background-color: blueviolet;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 5px;
+	font-size: 1.3rem;
+	transition: all 0.4s ease;
+	display: flex;
+	align-items: center;
+	width: 170px;
+	justify-content: space-between;
+}
+.price a:hover {
+	transform: rotate(200deg);
+	background-color: seagreen;
+}
