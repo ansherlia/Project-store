@@ -19,7 +19,7 @@ function ProductsPage() {
 	const [search, setSearch] = useState("");
 	const [query, setQuery] = useState({});
 	const [searchParams, setSearchParams] = useSearchParams();
-
+	console.log(query)
 	useEffect(() => {
 		setQuery(getInitialQuery(searchParams));
 		setDisplayed(products);
