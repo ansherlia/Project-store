@@ -10,7 +10,7 @@ function Layout({ children }) {
 	const { itemCounter } = state;
 	return (
 		<div className={styles.container}>
-			<header>
+			<header className={styles.header>
 				<Link to={"/products"}>TaskMan Store</Link>
 				<button>
 					<Link to={"/checkout"} className={styles.basketLink}>
@@ -20,7 +20,7 @@ function Layout({ children }) {
 				</button>
 			</header>
 			{children}
-			<footer>
+			<footer className={styles.footer}>
 				Developed By Reza with
 				<span>
 					<FaGrinHearts />
