@@ -1,6 +1,6 @@
 /** @format */
 
-header {
+.header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -13,7 +13,7 @@ header {
 	margin-bottom: 40px;
 	width: 1400px;
 }
-header a:first-child {
+.header a:first-child {
 	font-size: 1.7rem;
 	font-weight: 800;
 	border: 1px dashed rgb(172, 164, 164);
@@ -22,7 +22,7 @@ header a:first-child {
 	color: #fff;
 	text-decoration: none;
 }
-header a:last-child {
+.header a:last-child {
 	border: 2px dashed #b9b5b5;
 	padding: 10px 17px;
 	font-size: 1.5rem;
@@ -40,10 +40,10 @@ header a:last-child {
 	bottom: 555px;
 	font-size: 10px;
 }
-header button {
+.header button {
 	border: none;
 }
-footer {
+.footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -57,7 +57,7 @@ footer {
 	width: 1400px;
 	font-size: 1.4rem;
 }
-footer span {
+.footer span {
 	margin-left: 10px;
 	font-size: 1.5rem;
 	color: rgb(141, 6, 6);
